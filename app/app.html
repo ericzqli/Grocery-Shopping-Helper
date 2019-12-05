@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="app.css" type="text/css" rel="stylesheet"/>
+
+  <!-- Load TensorFlow.js -->
+  <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+  <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+  <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+</head>
+<body id="body">
+  <center>
+    <div class="div_allinline">
+      <div id="new" class="subdiv_allinline">
+        <button type="button" class="btn btn-outline-dark">New</button>
+      </div>
+      <h4 class="subdiv_allinline">Welcome to Grocery Shopping Helper!</h4>
+      <div id="reset" class="subdiv_allinline">
+        <button type="button" class="btn btn-outline-dark">Reset</button>
+      </div>
+    </div>
+  </center>
+  <center>
+    <div class='div_allinline'>
+      <div class='subdiv_allinline'>
+        <video autoplay playsinline muted id="webcam" width="200" height="300"></video><br>
+      </div>
+      <div class="subdiv_allinline" style="vertical-align: top;">
+        <center>
+          <h4 id="console"></h4>
+          <div id="bar_1"></div>
+          <div id="bar_2"></div>
+          <div id="bar_3"></div>
+          <div id="bar_4"></div>
+          <div id="bar_5"></div>
+        </center>
+      </div>
+    </div>
+    <div>
+        <div>
+          <input type="file" id="files"  οnchange="import();"/>
+
+
+          <input type="button" class="btn btn-outline-primary" id="import" value="Load"/>
+          <br>
+          <button type='button' id='jump' class='btn btn-outline-primary' onclick="window.open('pretrain.html') ;">Select Pre-Train Data</button>
+          <input type="number" name="inputClassNumber" id='inputClassNumber'/>
+          <button id="preTrain" type="button" class="btn btn-outline-primary">Get Pre-Train Data</button>
+        </div>
+        <input type="text" id="newclass" />
+        <button id="addClass" type="button" class="btn btn-outline-primary">Add a class</button>
+        <br />
+        <div id="classlist"></div>
+        <!--     <button onclick="window.location.href='app.html'">App</button> -->
+        <center>
+          <button id="save" type="button" class="btn btn-outline-dark">Save</button>
+        </center>
+    </div>
+  </center>
+
+  <script src="app.js"></script>
+
+
+  <img src="https://i.imgur.com/JlUvsxa.jpg" crossorigin id="imgPreTrain01" style="display: none">
+</body>
+</html>

@@ -1,0 +1,21 @@
+.div_allinline
+{
+	text_align:center;
+	margin:0 auto;
+	padding:0;
+	clear:both;
+}
+
+.subdiv_allinline
+{
+	margin:20;
+	padding:0;
+	display:inline-block;
+	_display:inline;
+	*display:inline;
+	zoom:1;
+}
+
+.imgPreTrain01 {
+	display: none;
+}
